@@ -18,13 +18,14 @@ initGulpTasks(gulp, {
         dist: 'example/dist',
         files: [
             'index.html',
-            '.gitignore'
+            '.gitignore',
+            'imgs/*'
         ],
         scripts: [
-            'example.js'
+            'app.js'
         ],
         less: [
-            'example.less'
+            'app.less'
         ]
     }
 });
