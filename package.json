@@ -58,19 +58,19 @@
     "smoothscroll": "global:smoothScroll"
   },
   "scripts": {
-    "build": "gulp clean && NODE_ENV=production gulp build",
-    "bump": "gulp bump",
-    "bump:major": "gulp bump:major",
-    "bump:minor": "gulp bump:minor",
-    "examples": "gulp dev:server",
+    "build": "node_modules/.bin/gulp clean && NODE_ENV=production node_modules/.bin/gulp build",
+    "bump": "node_modules/.bin/gulp bump",
+    "bump:major": "node_modules/.bin/gulp bump:major",
+    "bump:minor": "node_modules/.bin/gulp bump:minor",
+    "examples": "node_modules/.bin/gulp dev:server",
     "lint": "eslint ./; true",
     "lintRaw": "eslint ./ --max-warnings 0",
-    "publish:site": "NODE_ENV=production gulp publish:examples",
-    "release": "NODE_ENV=production gulp release",
-    "start": "gulp dev",
+    "publish:site": "NODE_ENV=production node_modules/.bin/gulp publish:examples",
+    "release": "NODE_ENV=production node_modules/.bin/gulp release",
+    "start": "node_modules/.bin/gulp dev",
     "test": "jest",
     "test:debug": "node-debug -p 12345 --nodejs --harmony ./node_modules/jest-cli/bin/jest.js --runInBand",
-    "watch": "gulp watch:lib"
+    "watch": "node_modules/.bin/gulp watch:lib"
   },
   "jest": {
     "scriptPreprocessor": "<rootDir>preprocessor",
